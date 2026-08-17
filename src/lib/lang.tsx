@@ -15,7 +15,7 @@ export function LangProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     document.documentElement.lang = lang;
-    document.title = content[lang].meta.title;
+    if (window.location.pathname === "/") document.title = content[lang].meta.title;
   }, [lang]);
 
   const setLang = (l: Lang) => {

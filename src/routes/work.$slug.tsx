@@ -34,7 +34,7 @@ function CasePage() {
   const { slug } = Route.useParams();
   const { t } = useLang();
   const item = t.cases.find((c) => c.slug === slug)!;
-  const next = t.cases[(t.cases.findIndex((c) => c.slug === slug) + 1) % t.cases.length];
+  const next = t.cases[(t.cases.findIndex((c) => c.slug === slug) + 1) % t.cases.length]!;
 
   return (
     <div className="min-h-screen">

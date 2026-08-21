@@ -42,7 +42,7 @@ export function Header() {
       >
         <div className="mx-auto flex h-16 w-full max-w-[1400px] items-center justify-between px-5 md:h-20 md:px-10">
           <Link to="/" className="text-sm font-medium tracking-[0.18em] uppercase text-foreground">
-            Resul<span className="text-primary"> N.</span>
+            Resul
           </Link>
 
           <nav className="hidden items-center gap-9 md:flex">

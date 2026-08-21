@@ -38,9 +38,13 @@ export function Work() {
           </h2>
         </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2 md:gap-8">
+        <div className="no-scrollbar -mx-5 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-5 pb-2 md:-mx-10 md:gap-8 md:px-10">
           {t.cases.map((c, i) => (
-            <Reveal key={c.slug} delay={i * 120}>
+            <Reveal
+              key={c.slug}
+              delay={i * 120}
+              className="w-[86%] shrink-0 snap-start sm:w-[70%] lg:w-[48%]"
+            >
               <Link
                 to="/work/$slug"
                 params={{ slug: c.slug }}

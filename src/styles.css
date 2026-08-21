@@ -113,6 +113,14 @@
     radial-gradient(80% 70% at 10% 90%, color-mix(in oklab, var(--ember) 14%, transparent), transparent 70%);
 }
 
+@utility no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 @utility text-glow {
   text-shadow: 0 0 40px color-mix(in oklab, var(--amber-glow) 35%, transparent);
 }

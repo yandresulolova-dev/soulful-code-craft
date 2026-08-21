@@ -50,8 +50,8 @@ function Index() {
         <Stats />
         <Work />
         <Services />
-        <About />
         <Process />
+        <About />
         <Contact />
       </main>
       <Footer />

@@ -33,7 +33,7 @@
   --color-amber-glow: var(--amber-glow);
   --color-ember: var(--ember);
   --color-surface: var(--surface);
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Space Grotesk", "Inter Tight", system-ui, sans-serif;
   --font-sans: "Inter Tight", system-ui, sans-serif;
 }
 

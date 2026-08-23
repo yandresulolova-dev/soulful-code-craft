@@ -222,7 +222,7 @@ const en: Dict = {
   },
   stats: [
     { value: "1.5 years", label: "in web design and development" },
-    { value: "2 case studies", label: "I can actually show" },
+    { value: "2 products", label: "launched and in real use" },
     { value: "1 specialist", label: "from idea to launch" },
   ],
   work: { title: "Selected work", label: "Work", view: "View case" },

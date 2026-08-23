@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useLang } from "@/lib/lang";
 import { TELEGRAM } from "@/i18n/content";
+import { CASE_MEDIA } from "@/lib/case-media";
 import { Reveal } from "./Reveal";
 import photo from "@/assets/resul.png.asset.json";
 
@@ -39,38 +40,62 @@ export function Work() {
         </Reveal>
 
         <div className="no-scrollbar -mx-5 mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-5 pb-2 md:-mx-10 md:gap-8 md:px-10">
-          {t.cases.map((c, i) => (
-            <Reveal
-              key={c.slug}
-              delay={i * 120}
-              className="w-[86%] shrink-0 snap-start sm:w-[70%] lg:w-[48%]"
-            >
-              <Link
-                to="/work/$slug"
-                params={{ slug: c.slug }}
-                className="group grain relative block overflow-hidden rounded-2xl border border-border"
+          {t.cases.map((c, i) => {
+            const cover = CASE_MEDIA[c.slug]?.cover;
+            return (
+              <Reveal
+                key={c.slug}
+                delay={i * 120}
+                className="w-[86%] shrink-0 snap-start sm:w-[70%] lg:w-[48%]"
               >
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface">
-                  <div
-                    className="warm-veil absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-105"
-                    style={{ opacity: i === 0 ? 0.9 : 0.6 }}
-                  />
-                  <span className="absolute inset-0 flex items-center justify-center font-display text-[clamp(2.5rem,7vw,5rem)] tracking-tight text-foreground/85 transition-transform duration-700 group-hover:scale-[1.04]">
-                    {c.name}
-                  </span>
-                </div>
-                <div className="flex items-end justify-between gap-4 p-5 md:p-7">
-                  <div>
-                    <h3 className="text-lg text-foreground md:text-xl">{c.name}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{c.category}</p>
+                <Link
+                  to="/work/$slug"
+                  params={{ slug: c.slug }}
+                  className="group grain relative block overflow-hidden rounded-2xl border border-border transition-colors duration-500 hover:border-primary/40"
+                >
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-surface">
+                    {cover ? (
+                      <img
+                        src={cover.url}
+                        alt={c.name}
+                        loading="lazy"
+                        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[900ms] ease-out group-hover:scale-105"
+                      />
+                    ) : (
+                      <>
+                        <div
+                          className="warm-veil absolute inset-0 transition-transform duration-[900ms] ease-out group-hover:scale-105"
+                          style={{ opacity: i === 0 ? 0.9 : 0.6 }}
+                        />
+                        <span className="absolute inset-0 flex items-center justify-center font-display text-[clamp(2.5rem,7vw,5rem)] tracking-tight text-foreground/85 transition-transform duration-700 group-hover:scale-[1.04]">
+                          {c.name}
+                        </span>
+                      </>
+                    )}
                   </div>
-                  <span className="shrink-0 text-sm text-primary opacity-0 transition-all duration-500 group-hover:opacity-100 md:-translate-x-2 md:group-hover:translate-x-0">
-                    {t.work.view} →
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
+                  <div className="flex items-end justify-between gap-4 p-5 md:p-7">
+                    <div>
+                      <h3 className="text-lg text-foreground md:text-xl">{c.name}</h3>
+                      <p className="mt-1 text-sm text-muted-foreground">{c.category}</p>
+                      <div className="mt-3 flex flex-wrap gap-1.5">
+                        {c.stack.map((tag) => (
+                          <span
+                            key={tag}
+                            className="rounded-full border border-border px-2.5 py-0.5 text-[11px] leading-5 text-muted-foreground"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <span className="shrink-0 text-sm text-primary opacity-0 transition-all duration-500 group-hover:opacity-100 md:-translate-x-2 md:group-hover:translate-x-0">
+                      {t.work.view} →
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -88,12 +113,12 @@ export function Services() {
             {t.services.title}
           </h2>
         </Reveal>
-        <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.services.items.map((s, i) => (
-            <Reveal key={s.title} delay={(i % 3) * 90} className="bg-background">
-              <div className="h-full p-7 transition-colors duration-500 hover:bg-surface md:p-9">
+            <Reveal key={s.title} delay={(i % 3) * 90}>
+              <div className="h-full rounded-2xl border border-border bg-surface/40 p-6 transition-all duration-500 hover:border-primary/40 hover:bg-surface md:p-7">
                 <p className="text-xs text-primary">0{i + 1}</p>
-                <h3 className="mt-4 text-lg text-foreground">{s.title}</h3>
+                <h3 className="mt-3 text-lg text-foreground">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
               </div>
             </Reveal>

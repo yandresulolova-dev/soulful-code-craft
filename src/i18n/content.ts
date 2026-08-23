@@ -5,6 +5,7 @@ export type CaseStudy = {
   name: string;
   category: string;
   year: string;
+  stack: string[];
   intro: string;
   problem?: string;
   task: string;
@@ -40,6 +41,7 @@ type Dict = {
     task: string;
     done: string;
     process: string;
+    screens: string;
     result: string;
     testimonial: string;
     next: string;
@@ -67,7 +69,7 @@ const ru: Dict = {
   },
   stats: [
     { value: "1,5 года", label: "в веб-дизайне и разработке" },
-    { value: "2 кейса", label: "которые можно показать" },
+    { value: "2 продукта", label: "запущены в реальную работу" },
     { value: "1 специалист", label: "от идеи до запуска" },
   ],
   work: { title: "Избранные работы", label: "Работы", view: "Смотреть кейс" },
@@ -124,6 +126,7 @@ const ru: Dict = {
     task: "Задача",
     done: "Что было сделано",
     process: "Процесс",
+    screens: "Экраны",
     result: "Результат",
     testimonial: "Отзыв",
     next: "Следующий проект",
@@ -134,6 +137,7 @@ const ru: Dict = {
       name: "TATE Track",
       category: "Сервис отслеживания заказов",
       year: "Tracking System / Web App",
+      stack: ["React", "Supabase", "Auth", "UI/UX", "Frontend"],
       intro: "Я создавал сервис для бренда одежды и байеров.",
       problem:
         "Менеджеры постоянно получали сообщения от клиентов с вопросами о том, где находится их заказ.",
@@ -170,6 +174,7 @@ const ru: Dict = {
       name: "KODA",
       category: "Сайт премиум-агентства",
       year: "Premium Agency Website",
+      stack: ["React", "Tailwind CSS", "3D / Motion", "Адаптив"],
       intro:
         "Для агентства KODA был создан современный сайт в премиальном технологичном стиле.",
       task:
@@ -217,7 +222,7 @@ const en: Dict = {
   },
   stats: [
     { value: "1.5 years", label: "in web design and development" },
-    { value: "2 case studies", label: "I can actually show" },
+    { value: "2 products", label: "launched and in real use" },
     { value: "1 specialist", label: "from idea to launch" },
   ],
   work: { title: "Selected work", label: "Work", view: "View case" },
@@ -273,6 +278,7 @@ const en: Dict = {
     task: "Goal",
     done: "What I did",
     process: "Process",
+    screens: "Screens",
     result: "Outcome",
     testimonial: "Client feedback",
     next: "Next project",
@@ -283,6 +289,7 @@ const en: Dict = {
       name: "TATE Track",
       category: "Order tracking service",
       year: "Tracking System / Web App",
+      stack: ["React", "Supabase", "Auth", "UI/UX", "Frontend"],
       intro: "A service I built for a clothing brand and its buyers.",
       problem:
         "Managers constantly received messages from customers asking where their order was.",
@@ -319,6 +326,7 @@ const en: Dict = {
       name: "KODA",
       category: "Premium agency website",
       year: "Premium Agency Website",
+      stack: ["React", "Tailwind CSS", "3D / Motion", "Responsive"],
       intro: "A modern website in a premium, technical style built for the KODA agency.",
       task:
         "Create an expressive website for the premium segment with strong visuals, responsive layout and interaction.",

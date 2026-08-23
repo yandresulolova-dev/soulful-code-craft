@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { content } from "@/i18n/content";
 import { useLang } from "@/lib/lang";
+import { CASE_MEDIA } from "@/lib/case-media";
 import { Reveal } from "@/components/site/Reveal";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
@@ -35,6 +36,7 @@ function CasePage() {
   const { t } = useLang();
   const item = t.cases.find((c) => c.slug === slug)!;
   const next = t.cases[(t.cases.findIndex((c) => c.slug === slug) + 1) % t.cases.length]!;
+  const media = CASE_MEDIA[slug];
 
   return (
     <div className="min-h-screen">
@@ -59,6 +61,16 @@ function CasePage() {
                 </span>
               )}
             </div>
+            <div className="mt-5 flex flex-wrap gap-1.5">
+              {item.stack.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-border bg-surface/60 px-3 py-1 text-xs text-muted-foreground"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-foreground md:text-xl">
               {item.intro}
             </p>
@@ -79,6 +91,34 @@ function CasePage() {
             </Reveal>
           </div>
         </section>
+
+        {media && media.shots.length > 0 && (
+          <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
+            <div className="mx-auto w-full max-w-[1400px]">
+              <Reveal>
+                <h2 className="font-display text-3xl text-foreground md:text-4xl">{t.caseUi.screens}</h2>
+              </Reveal>
+              <div className="mt-10 grid gap-6 md:grid-cols-2">
+                {media.shots.map((shot, i) => (
+                  <Reveal
+                    key={shot.url}
+                    delay={(i % 2) * 100}
+                    className={i === 0 ? "md:col-span-2" : undefined}
+                  >
+                    <div className="rounded-2xl border border-border bg-surface/60 p-2 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
+                      <img
+                        src={shot.url}
+                        alt={shot.alt}
+                        loading="lazy"
+                        className="w-full rounded-xl"
+                      />
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
           <div className="mx-auto w-full max-w-[1400px]">

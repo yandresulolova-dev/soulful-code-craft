@@ -5,6 +5,7 @@ export type CaseStudy = {
   name: string;
   category: string;
   year: string;
+  stack: string[];
   intro: string;
   problem?: string;
   task: string;
@@ -40,6 +41,7 @@ type Dict = {
     task: string;
     done: string;
     process: string;
+    screens: string;
     result: string;
     testimonial: string;
     next: string;
@@ -67,7 +69,7 @@ const ru: Dict = {
   },
   stats: [
     { value: "1,5 года", label: "в веб-дизайне и разработке" },
-    { value: "2 кейса", label: "которые можно показать" },
+    { value: "2 продукта", label: "запущены в реальную работу" },
     { value: "1 специалист", label: "от идеи до запуска" },
   ],
   work: { title: "Избранные работы", label: "Работы", view: "Смотреть кейс" },
@@ -124,6 +126,7 @@ const ru: Dict = {
     task: "Задача",
     done: "Что было сделано",
     process: "Процесс",
+    screens: "Экраны",
     result: "Результат",
     testimonial: "Отзыв",
     next: "Следующий проект",
@@ -134,6 +137,7 @@ const ru: Dict = {
       name: "TATE Track",
       category: "Сервис отслеживания заказов",
       year: "Tracking System / Web App",
+      stack: ["React", "Supabase", "Auth", "UI/UX", "Frontend"],
       intro: "Я создавал сервис для бренда одежды и байеров.",
       problem:
         "Менеджеры постоянно получали сообщения от клиентов с вопросами о том, где находится их заказ.",
@@ -170,6 +174,7 @@ const ru: Dict = {
       name: "KODA",
       category: "Сайт премиум-агентства",
       year: "Premium Agency Website",
+      stack: ["React", "Tailwind CSS", "3D / Motion", "Адаптив"],
       intro:
         "Для агентства KODA был создан современный сайт в премиальном технологичном стиле.",
       task:

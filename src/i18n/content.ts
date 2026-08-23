@@ -278,6 +278,7 @@ const en: Dict = {
     task: "Goal",
     done: "What I did",
     process: "Process",
+    screens: "Screens",
     result: "Outcome",
     testimonial: "Client feedback",
     next: "Next project",
@@ -288,6 +289,7 @@ const en: Dict = {
       name: "TATE Track",
       category: "Order tracking service",
       year: "Tracking System / Web App",
+      stack: ["React", "Supabase", "Auth", "UI/UX", "Frontend"],
       intro: "A service I built for a clothing brand and its buyers.",
       problem:
         "Managers constantly received messages from customers asking where their order was.",
@@ -324,6 +326,7 @@ const en: Dict = {
       name: "KODA",
       category: "Premium agency website",
       year: "Premium Agency Website",
+      stack: ["React", "Tailwind CSS", "3D / Motion", "Responsive"],
       intro: "A modern website in a premium, technical style built for the KODA agency.",
       task:
         "Create an expressive website for the premium segment with strong visuals, responsive layout and interaction.",

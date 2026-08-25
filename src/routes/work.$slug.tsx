@@ -103,7 +103,7 @@ function CasePage() {
                   <Reveal
                     key={shot.url}
                     delay={(i % 2) * 100}
-                    className={i === 0 ? "md:col-span-2" : undefined}
+                    className={i === 0 ? "md:col-span-2" : ""}
                   >
                     <div className="rounded-2xl border border-border bg-surface/60 p-2 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
                       <img

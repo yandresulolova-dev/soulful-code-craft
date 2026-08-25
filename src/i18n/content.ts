@@ -201,6 +201,38 @@ const ru: Dict = {
       result: "Полностью собранный сайт за 2 дня.",
       highlight: "Сайт создан за 2 дня",
     },
+    {
+      slug: "aquagrace",
+      name: "AquaGrace",
+      category: "Сайт школы плавания",
+      year: "Personal Brand / Landing",
+      stack: ["React", "Tailwind CSS", "Motion", "UI/UX", "Адаптив"],
+      intro:
+        "Лендинг школы водных видов спорта Дарьи Боковой — плавание, синхронное и русалочье плавание.",
+      problem:
+        "У тренера не было площадки, где новый ученик мог бы сразу понять форматы занятий, стоимость и записаться, — всё держалось на переписке.",
+      task:
+        "Собрать персональный сайт-визитку, который передаёт мягкую подачу тренера, снимает страх воды у новичка и ведёт к записи на тренировку.",
+      done: [
+        "визуальная концепция в водной сине-голубой палитре",
+        "hero с портретом и рукописными подписями-акцентами",
+        "блок «Обо мне» с метриками опыта",
+        "секция «Кому подойдёт»",
+        "форматы занятий с ценами и выделением популярного тарифа",
+        "блок отзывов учеников",
+        "секция контактов и записи",
+        "анимации появления и бегущая строка",
+        "адаптивная вёрстка под мобильные",
+      ],
+      process: [
+        "Разбор аудитории: новички, взрослые со страхом воды, дети.",
+        "Структура лендинга и путь до записи на тренировку.",
+        "Дизайн в водной палитре с акцентом на портрет тренера.",
+        "Разработка, анимации и адаптив под мобильные устройства.",
+      ],
+      result:
+        "Готовый лендинг персонального бренда: понятные форматы, прозрачные цены и один чёткий путь до записи на тренировку.",
+    },
   ],
 };
 
@@ -351,6 +383,38 @@ const en: Dict = {
       ],
       result: "A complete website delivered in 2 days.",
       highlight: "Built in 2 days",
+    },
+    {
+      slug: "aquagrace",
+      name: "AquaGrace",
+      category: "Swimming school website",
+      year: "Personal Brand / Landing",
+      stack: ["React", "Tailwind CSS", "Motion", "UI/UX", "Responsive"],
+      intro:
+        "A landing page for Daria Bokova's water sports school — swimming, synchronised and mermaid swimming.",
+      problem:
+        "The coach had no place where a new student could immediately understand the formats, the pricing and how to book — everything happened in DMs.",
+      task:
+        "Build a personal brand site that conveys the coach's gentle approach, eases a beginner's fear of water and leads to a booking.",
+      done: [
+        "visual concept in a deep water blue palette",
+        "hero with a portrait and handwritten accent notes",
+        "about section with experience metrics",
+        "\"Who it's for\" section",
+        "training formats with pricing and a highlighted popular plan",
+        "student testimonials",
+        "contact and booking section",
+        "reveal animations and a marquee line",
+        "responsive mobile layout",
+      ],
+      process: [
+        "Mapping the audience: beginners, adults with fear of water, kids.",
+        "Landing structure and the path to booking a session.",
+        "Design in a water palette centred on the coach's portrait.",
+        "Development, motion and responsive mobile layout.",
+      ],
+      result:
+        "A finished personal brand landing: clear formats, transparent pricing and one obvious path to booking a session.",
     },
   ],
 };

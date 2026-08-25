@@ -60,7 +60,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2 rounded-full border border-border bg-background/40 px-3.5 py-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-primary" />
               <span className="text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-                {t.hero.badge ?? "Resul Niazdurdyev"}
+                {t.hero.kicker}
               </span>
             </div>
 

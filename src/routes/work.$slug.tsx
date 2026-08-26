@@ -78,16 +78,22 @@ function CasePage() {
         </section>
 
         <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-12 md:grid-cols-2 md:gap-16">
+          <div className="mx-auto grid w-full max-w-[1400px] gap-5 md:grid-cols-2">
             {item.problem && (
               <Reveal>
-                <h2 className="text-xs uppercase tracking-[0.28em] text-primary">{t.caseUi.problem}</h2>
-                <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{item.problem}</p>
+                <div className="h-full rounded-2xl border border-border bg-surface/25 p-6 md:p-8">
+                  <h2 className="text-[11px] uppercase tracking-[0.28em] text-primary">{t.caseUi.problem}</h2>
+                  <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground md:text-base">
+                    {item.problem}
+                  </p>
+                </div>
               </Reveal>
             )}
             <Reveal delay={100}>
-              <h2 className="text-xs uppercase tracking-[0.28em] text-primary">{t.caseUi.task}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{item.task}</p>
+              <div className="h-full rounded-2xl border border-border bg-surface/25 p-6 md:p-8">
+                <h2 className="text-[11px] uppercase tracking-[0.28em] text-primary">{t.caseUi.task}</h2>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground md:text-base">{item.task}</p>
+              </div>
             </Reveal>
           </div>
         </section>

@@ -48,7 +48,7 @@ function CasePage() {
             <Link to="/" hash="work" className="text-sm text-muted-foreground hover:text-foreground">
               ← {t.caseUi.back}
             </Link>
-            <h1 className="mt-8 font-display text-[clamp(2.6rem,9vw,7rem)] leading-none tracking-tight text-foreground">
+            <h1 className="mt-8 font-display text-[clamp(2.4rem,8vw,6rem)] font-extrabold leading-[1.02] tracking-[-0.035em] text-foreground">
               {item.name}
             </h1>
             <div className="mt-6 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
@@ -78,16 +78,22 @@ function CasePage() {
         </section>
 
         <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
-          <div className="mx-auto grid w-full max-w-[1400px] gap-12 md:grid-cols-2 md:gap-16">
+          <div className="mx-auto grid w-full max-w-[1400px] gap-5 md:grid-cols-2">
             {item.problem && (
               <Reveal>
-                <h2 className="text-xs uppercase tracking-[0.28em] text-primary">{t.caseUi.problem}</h2>
-                <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{item.problem}</p>
+                <div className="h-full rounded-2xl border border-border bg-surface/25 p-6 md:p-8">
+                  <h2 className="text-[11px] uppercase tracking-[0.28em] text-primary">{t.caseUi.problem}</h2>
+                  <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground md:text-base">
+                    {item.problem}
+                  </p>
+                </div>
               </Reveal>
             )}
             <Reveal delay={100}>
-              <h2 className="text-xs uppercase tracking-[0.28em] text-primary">{t.caseUi.task}</h2>
-              <p className="mt-4 text-lg leading-relaxed text-muted-foreground">{item.task}</p>
+              <div className="h-full rounded-2xl border border-border bg-surface/25 p-6 md:p-8">
+                <h2 className="text-[11px] uppercase tracking-[0.28em] text-primary">{t.caseUi.task}</h2>
+                <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground md:text-base">{item.task}</p>
+              </div>
             </Reveal>
           </div>
         </section>
@@ -96,23 +102,28 @@ function CasePage() {
           <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1400px]">
               <Reveal>
-                <h2 className="font-display text-3xl text-foreground md:text-4xl">{t.caseUi.screens}</h2>
+                <h2 className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground md:text-4xl">
+                  {t.caseUi.screens}
+                </h2>
               </Reveal>
-              <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <div className="mt-8 grid gap-5 md:mt-10 md:grid-cols-2">
                 {media.shots.map((shot, i) => (
                   <Reveal
                     key={shot.url}
                     delay={(i % 2) * 100}
                     className={i === 0 ? "md:col-span-2" : ""}
                   >
-                    <div className="rounded-2xl border border-border bg-surface/60 p-2 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
+                    <figure className="overflow-hidden rounded-2xl border border-border bg-surface/40 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
                       <img
                         src={shot.url}
                         alt={shot.alt}
                         loading="lazy"
-                        className="w-full rounded-xl"
+                        className="block w-full border-b border-border"
                       />
-                    </div>
+                      <figcaption className="px-5 py-3 text-xs leading-relaxed text-muted-foreground">
+                        {shot.alt}
+                      </figcaption>
+                    </figure>
                   </Reveal>
                 ))}
               </div>
@@ -123,7 +134,7 @@ function CasePage() {
         <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
           <div className="mx-auto w-full max-w-[1400px]">
             <Reveal>
-              <h2 className="font-display text-3xl text-foreground md:text-4xl">{t.caseUi.done}</h2>
+              <h2 className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground md:text-4xl">{t.caseUi.done}</h2>
             </Reveal>
             <ul className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
               {item.done.map((d, i) => (
@@ -141,7 +152,7 @@ function CasePage() {
         <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
           <div className="mx-auto w-full max-w-[1400px]">
             <Reveal>
-              <h2 className="font-display text-3xl text-foreground md:text-4xl">{t.caseUi.process}</h2>
+              <h2 className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground md:text-4xl">{t.caseUi.process}</h2>
             </Reveal>
             <ol className="mt-10 space-y-px overflow-hidden rounded-2xl border border-border bg-border">
               {item.process.map((p, i) => (

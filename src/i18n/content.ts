@@ -69,7 +69,7 @@ const ru: Dict = {
   },
   stats: [
     { value: "1,5 года", label: "в веб-дизайне и разработке" },
-    { value: "2 продукта", label: "запущены в реальную работу" },
+    { value: "3 продукта", label: "запущены в реальную работу" },
     { value: "1 специалист", label: "от идеи до запуска" },
   ],
   work: { title: "Избранные работы", label: "Работы", view: "Смотреть кейс" },
@@ -254,7 +254,7 @@ const en: Dict = {
   },
   stats: [
     { value: "1.5 years", label: "in web design and development" },
-    { value: "2 products", label: "launched and in real use" },
+    { value: "3 products", label: "launched and in real use" },
     { value: "1 specialist", label: "from idea to launch" },
   ],
   work: { title: "Selected work", label: "Work", view: "View case" },

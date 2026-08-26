@@ -34,7 +34,7 @@ export function Work() {
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <SectionLabel>{t.work.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
+          <h2 className="font-display text-[clamp(1.9rem,4.2vw,3.1rem)] font-bold tracking-[-0.02em] leading-tight text-foreground">
             {t.work.title}
           </h2>
         </Reveal>
@@ -109,7 +109,7 @@ export function Services() {
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <SectionLabel>{t.services.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
+          <h2 className="font-display text-[clamp(1.9rem,4.2vw,3.1rem)] font-bold tracking-[-0.02em] leading-tight text-foreground">
             {t.services.title}
           </h2>
         </Reveal>
@@ -133,28 +133,30 @@ export function About() {
   const { t } = useLang();
   return (
     <section id="about" className="scroll-mt-24 border-t border-border px-5 py-20 md:px-10 md:py-32">
-      <div className="mx-auto grid w-full max-w-[1400px] gap-10 md:grid-cols-[0.8fr_1.2fr] md:gap-16">
+      <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
-          <div className="grain relative overflow-hidden rounded-2xl">
-            <img
-              src={photo.url}
-              alt="Resul Niazdurdyev"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="aspect-[4/5] w-full object-cover"
-            />
-          </div>
-        </Reveal>
-        <Reveal delay={120}>
-          <SectionLabel>{t.about.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
-            {t.about.title}
-          </h2>
-          <div className="mt-7 space-y-5 text-base leading-relaxed text-muted-foreground md:text-lg">
-            {t.about.paragraphs.map((p) => (
-              <p key={p}>{p}</p>
-            ))}
+          <div className="grid overflow-hidden rounded-3xl border border-border bg-surface/25 md:grid-cols-[0.75fr_1.25fr]">
+            <div className="grain relative border-b border-border md:border-b-0 md:border-r">
+              <img
+                src={photo.url}
+                alt="Resul Niazdurdyev"
+                loading="lazy"
+                width={1024}
+                height={1024}
+                className="aspect-[4/5] h-full w-full object-cover"
+              />
+            </div>
+            <div className="p-6 sm:p-10 md:p-14">
+              <SectionLabel>{t.about.label}</SectionLabel>
+              <h2 className="font-display text-[clamp(1.9rem,4vw,3rem)] font-bold leading-tight tracking-[-0.02em] text-foreground">
+                {t.about.title}
+              </h2>
+              <div className="mt-7 space-y-5 text-[15px] leading-relaxed text-muted-foreground md:text-lg">
+                {t.about.paragraphs.map((p) => (
+                  <p key={p}>{p}</p>
+                ))}
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>
@@ -169,7 +171,7 @@ export function Process() {
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <SectionLabel>{t.process.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
+          <h2 className="font-display text-[clamp(1.9rem,4.2vw,3.1rem)] font-bold tracking-[-0.02em] leading-tight text-foreground">
             {t.process.title}
           </h2>
         </Reveal>
@@ -206,7 +208,7 @@ export function Contact() {
       <div className="mx-auto w-full max-w-[900px] text-center">
         <Reveal>
           <SectionLabel>{t.contact.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2.2rem,6vw,4.2rem)] leading-tight text-foreground text-glow">
+          <h2 className="font-display text-[clamp(2rem,5.5vw,3.8rem)] font-extrabold tracking-[-0.03em] leading-tight text-foreground text-glow">
             {t.contact.title}
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">

@@ -34,7 +34,7 @@ export function Hero() {
   return (
     <section
       ref={ref}
-      className="grain relative flex min-h-[92svh] items-center overflow-hidden pt-28 pb-16 md:pt-32"
+      className="grain relative flex min-h-[80svh] items-center overflow-hidden pt-28 pb-16 md:pt-32"
       style={{ "--mx": "0%", "--my": "0%" } as React.CSSProperties}
     >
       <div className="warm-veil animate-drift pointer-events-none absolute inset-0 -z-10" />

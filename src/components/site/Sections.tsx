@@ -34,7 +34,7 @@ export function Work() {
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <SectionLabel>{t.work.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
+          <h2 className="font-display text-[clamp(1.9rem,4.2vw,3.1rem)] font-bold tracking-[-0.02em] leading-tight text-foreground">
             {t.work.title}
           </h2>
         </Reveal>
@@ -109,7 +109,7 @@ export function Services() {
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <SectionLabel>{t.services.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
+          <h2 className="font-display text-[clamp(1.9rem,4.2vw,3.1rem)] font-bold tracking-[-0.02em] leading-tight text-foreground">
             {t.services.title}
           </h2>
         </Reveal>
@@ -171,7 +171,7 @@ export function Process() {
       <div className="mx-auto w-full max-w-[1400px]">
         <Reveal>
           <SectionLabel>{t.process.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2rem,4.5vw,3.4rem)] leading-tight text-foreground">
+          <h2 className="font-display text-[clamp(1.9rem,4.2vw,3.1rem)] font-bold tracking-[-0.02em] leading-tight text-foreground">
             {t.process.title}
           </h2>
         </Reveal>
@@ -208,7 +208,7 @@ export function Contact() {
       <div className="mx-auto w-full max-w-[900px] text-center">
         <Reveal>
           <SectionLabel>{t.contact.label}</SectionLabel>
-          <h2 className="font-display text-[clamp(2.2rem,6vw,4.2rem)] leading-tight text-foreground text-glow">
+          <h2 className="font-display text-[clamp(2rem,5.5vw,3.8rem)] font-extrabold tracking-[-0.03em] leading-tight text-foreground text-glow">
             {t.contact.title}
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground md:text-lg">

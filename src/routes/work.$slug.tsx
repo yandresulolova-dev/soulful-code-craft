@@ -102,23 +102,28 @@ function CasePage() {
           <section className="border-t border-border px-5 py-16 md:px-10 md:py-24">
             <div className="mx-auto w-full max-w-[1400px]">
               <Reveal>
-                <h2 className="font-display text-3xl text-foreground md:text-4xl">{t.caseUi.screens}</h2>
+                <h2 className="font-display text-2xl font-bold tracking-[-0.02em] text-foreground md:text-4xl">
+                  {t.caseUi.screens}
+                </h2>
               </Reveal>
-              <div className="mt-10 grid gap-6 md:grid-cols-2">
+              <div className="mt-8 grid gap-5 md:mt-10 md:grid-cols-2">
                 {media.shots.map((shot, i) => (
                   <Reveal
                     key={shot.url}
                     delay={(i % 2) * 100}
                     className={i === 0 ? "md:col-span-2" : ""}
                   >
-                    <div className="rounded-2xl border border-border bg-surface/60 p-2 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
+                    <figure className="overflow-hidden rounded-2xl border border-border bg-surface/40 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
                       <img
                         src={shot.url}
                         alt={shot.alt}
                         loading="lazy"
-                        className="w-full rounded-xl"
+                        className="block w-full border-b border-border"
                       />
-                    </div>
+                      <figcaption className="px-5 py-3 text-xs leading-relaxed text-muted-foreground">
+                        {shot.alt}
+                      </figcaption>
+                    </figure>
                   </Reveal>
                 ))}
               </div>

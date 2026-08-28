@@ -7,36 +7,18 @@ import { Work, Services, About, Process, Contact } from "@/components/site/Secti
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Resul Niazdurdyev — Веб-дизайн и разработка сайтов" },
-      {
-        name: "description",
-        content:
-          "Resul Niazdurdyev создаёт современные сайты, интерфейсы и цифровые продукты — от идеи и дизайна до разработки и запуска.",
-      },
-      { property: "og:title", content: "Resul Niazdurdyev — Веб-дизайн и разработка сайтов" },
-      {
-        property: "og:description",
-        content:
-          "Resul Niazdurdyev создаёт современные сайты, интерфейсы и цифровые продукты — от идеи и дизайна до разработки и запуска.",
-      },
+      { title: "" },
+      { name: "description", content: "" },
+      { property: "og:title", content: "" },
+      { property: "og:description", content: "" },
+      { name: "author", content: "" },
+      { property: "og:site_name", content: "" },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
-    scripts: [
-      {
-        type: "application/ld+json",
-        children: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Resul Niazdurdyev",
-          jobTitle: "Web Designer & Developer",
-          url: "/",
-          sameAs: ["https://t.me/Resbelief"],
-        }),
-      },
-    ],
+    scripts: [],
   }),
   component: Index,
 });

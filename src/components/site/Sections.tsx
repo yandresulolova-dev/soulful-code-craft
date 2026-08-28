@@ -3,7 +3,7 @@ import { useLang } from "@/lib/lang";
 import { TELEGRAM } from "@/i18n/content";
 import { CASE_MEDIA } from "@/lib/case-media";
 import { Reveal } from "./Reveal";
-import photo from "@/assets/resul.png.asset.json";
+import photo from "@/assets/resul.png";
 
 function SectionLabel({ children }: { children: string }) {
   return (
@@ -138,7 +138,7 @@ export function About() {
           <div className="grid overflow-hidden rounded-3xl border border-border bg-surface/25 md:grid-cols-[0.75fr_1.25fr]">
             <div className="grain relative border-b border-border md:border-b-0 md:border-r">
               <img
-                src={photo.url}
+                src={photo}
                 alt="Resul Niazdurdyev"
                 loading="lazy"
                 width={1024}

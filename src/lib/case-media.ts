@@ -1,9 +1,9 @@
-import kodaHero from "@/assets/koda-hero.jpg.asset.json";
-import kodaServices from "@/assets/koda-services.jpg.asset.json";
-import kodaContact from "@/assets/koda-contact.jpg.asset.json";
-import aquaHero from "@/assets/aquagrace-hero.jpg.asset.json";
-import aquaAbout from "@/assets/aquagrace-about.jpg.asset.json";
-import aquaPricing from "@/assets/aquagrace-pricing.jpg.asset.json";
+import kodaHero from "@/assets/koda-hero.jpg";
+import kodaServices from "@/assets/koda-services.jpg";
+import kodaContact from "@/assets/koda-contact.jpg";
+import aquaHero from "@/assets/aquagrace-hero.jpg";
+import aquaAbout from "@/assets/aquagrace-about.jpg";
+import aquaPricing from "@/assets/aquagrace-pricing.jpg";
 
 export type CaseMedia = {
   cover?: { url: string };
@@ -12,19 +12,19 @@ export type CaseMedia = {
 
 export const CASE_MEDIA: Record<string, CaseMedia> = {
   koda: {
-    cover: { url: kodaHero.url },
+    cover: { url: kodaHero },
     shots: [
-      { url: kodaHero.url, alt: "KODA — hero screen" },
-      { url: kodaServices.url, alt: "KODA — services section" },
-      { url: kodaContact.url, alt: "KODA — contact section" },
+      { url: kodaHero, alt: "KODA — hero screen" },
+      { url: kodaServices, alt: "KODA — services section" },
+      { url: kodaContact, alt: "KODA — contact section" },
     ],
   },
   aquagrace: {
-    cover: { url: aquaHero.url },
+    cover: { url: aquaHero },
     shots: [
-      { url: aquaHero.url, alt: "AquaGrace — hero screen" },
-      { url: aquaAbout.url, alt: "AquaGrace — about and metrics" },
-      { url: aquaPricing.url, alt: "AquaGrace — training formats and pricing" },
+      { url: aquaHero, alt: "AquaGrace — hero screen" },
+      { url: aquaAbout, alt: "AquaGrace — about and metrics" },
+      { url: aquaPricing, alt: "AquaGrace — training formats and pricing" },
     ],
   },
   "tate-track": { shots: [] },
